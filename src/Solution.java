@@ -101,7 +101,7 @@ public class Solution {
 				}
 			}
 			
-			m.path.pop();
+			m.path.pop(); // if there's no next move available, moves one step back and delete the current position in the path
 			System.out.println("Moved back");
 			if(m.path.size() <= 0) {
 				return false;
@@ -109,7 +109,7 @@ public class Solution {
 		}
 	}
 
-	public static boolean isValid(int y, int x, Maze m) {
+	public static boolean isValid(int y, int x, Maze m) { //check for boundaries
 		if(y < 0 || 
 			y >= m.maze.length ||
 			x < 0 ||
